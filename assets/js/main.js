@@ -1,31 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS
+    // Initialize AOS with animations on scroll in both directions
     AOS.init({
         duration: 800,
         easing: 'ease-in-out',
-        once: true,
-        mirror: false
+        once: false,
+        mirror: true,
+        offset: 50
     });
 
-    // Enhanced scroll spy for navbar
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
     const footer = document.querySelector('.new-footer');
 
+    // Updates the active navigation link based on scroll position
     function updateActiveSection() {
         const scrollPosition = window.scrollY;
         const windowHeight = window.innerHeight;
         const documentHeight = document.documentElement.scrollHeight;
         let currentSection = '';
 
-        // Check if we're near the footer
+        // Special handling for footer section
         const footerTop = footer.offsetTop - windowHeight/2;
         if (scrollPosition >= footerTop) {
             currentSection = 'contact';
         } else {
-            // Check other sections
             sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100; // Offset for better detection
+                const sectionTop = section.offsetTop - 100;
                 const sectionBottom = sectionTop + section.clientHeight;
                 if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
                     currentSection = section.getAttribute('id');
@@ -33,16 +33,15 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Update active states
         navLinks.forEach(link => {
             link.classList.remove('active');
-            const href = link.getAttribute('href').substring(1); // Remove the #
+            const href = link.getAttribute('href').substring(1);
             if (href === currentSection) {
                 link.classList.add('active');
             }
         });
 
-        // Special case for when we're at the top of the page
+        // Handle home section when at the top of page
         if (scrollPosition < sections[0].offsetTop - 100) {
             navLinks.forEach(link => {
                 link.classList.remove('active');
@@ -53,28 +52,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Handle page load/refresh
+    // Handles initial page load and deep linking
     function handlePageLoad() {
-        // Check if there's a hash in the URL
         if (window.location.hash) {
             const targetSection = document.querySelector(window.location.hash);
             if (targetSection) {
-                // Scroll to the section after a small delay to ensure proper positioning
                 setTimeout(() => {
                     targetSection.scrollIntoView();
                     updateActiveSection();
                 }, 100);
             }
         } else {
-            // If no hash, just update based on scroll position
             updateActiveSection();
         }
     }
 
-    // Initial check for active section on page load
     handlePageLoad();
 
-    // Smooth scroll for navigation links
+    // Enable smooth scrolling for all anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -82,19 +77,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.querySelector(targetId);
             if (targetSection) {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
-                // Update URL hash without jumping
                 history.pushState(null, null, targetId);
             }
         });
     });
 
-    // Update active section on scroll
+    // Event listeners for scroll updates
     window.addEventListener('scroll', updateActiveSection);
-
-    // Update active section on page resize
     window.addEventListener('resize', updateActiveSection);
 
-    // Navbar scroll behavior
+    // Navbar appearance on scroll
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
@@ -104,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Interest badges hover effect
+    // Interest badges hover animation
     const badges = document.querySelectorAll('.interest-badge');
     badges.forEach(badge => {
         badge.addEventListener('mouseenter', function() {
@@ -115,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Loading animation
+    // Remove loading screen after page load
     window.addEventListener('load', function() {
         const loader = document.querySelector('.loading-animation');
         if (loader) {
