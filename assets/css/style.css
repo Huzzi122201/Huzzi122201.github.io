@@ -171,26 +171,96 @@ a:hover {
     padding: 0.75rem 1.5rem;
     font-weight: 500;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn:focus, 
+.btn:active, 
+.btn:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary:hover {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
 }
 
 .btn-primary {
-    background-color: #E0D5C1;
+    background: transparent;
     color: #0A0C10;
     border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #FFFFFF;
+    transition: width 0.5s ease;
+    z-index: -1;
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #E0D5C1;
+    z-index: -2;
+}
+
+.btn-primary:hover::before {
+    width: 100%;
 }
 
 .btn-primary:hover {
-    background-color: #FFFFFF;
+    color: #0A0C10;
 }
 
 .btn-outline-primary {
-    border: 2px solid #E0D5C1;
-    color: #E0D5C1;
+    border: 2px solid #E0D5C1 !important;
+    color: #E0D5C1 !important;
+    background: transparent !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
-.btn-outline-primary:hover {
-    background-color: #E0D5C1;
-    color: #0A0C10;
+.btn-outline-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #E0D5C1;
+    transition: width 0.5s ease;
+    z-index: -1;
+}
+
+.btn-outline-primary:hover::before {
+    width: 100%;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    color: #0A0C10 !important;
+    border-color: #E0D5C1 !important;
+    background-color: transparent !important;
 }
 
 /* Section Styles */
