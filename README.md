@@ -31,8 +31,8 @@ This portfolio website serves as a comprehensive showcase of my professional jou
 ## 🚀 Installation & Usage
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Huzzi122201/Huzzi122201.github.io.git
-   cd Huzzi122201.github.io
+   git clone https://github.com/Huzzi122201/MyPortfolio.git
+   cd MyPortfolio.git
    ```
 
 2. **View locally:**
@@ -45,7 +45,7 @@ This portfolio website serves as a comprehensive showcase of my professional jou
    - Update `assets/js/main.js` for functionality
 
 ## 🔗 Live Demo
-Visit my portfolio: [https://huzzi122201.github.io](https://huzzi122201.github.io)
+Visit my portfolio: [https://huzzi122201.github.io](https://huzzi122201.github.io/MyPortfolio/)
 
 ## About Me
 I'm a tech enthusiast pursuing my Computer Science degree, specializing in:
