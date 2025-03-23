@@ -174,6 +174,9 @@ a:hover {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .btn:focus, 
@@ -188,12 +191,15 @@ a:hover {
     outline: none !important;
     box-shadow: none !important;
     background-color: transparent !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
 }
 
 .btn-primary {
-    background: transparent;
-    color: #0A0C10;
-    border: none;
+    background-color: transparent !important;
+    color: #0A0C10 !important;
+    border: none !important;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -227,13 +233,14 @@ a:hover {
 }
 
 .btn-primary:hover {
-    color: #0A0C10;
+    color: #0A0C10 !important;
+    border: none !important;
 }
 
 .btn-outline-primary {
     border: 2px solid #E0D5C1 !important;
     color: #E0D5C1 !important;
-    background: transparent !important;
+    background-color: transparent !important;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -261,6 +268,15 @@ a:hover {
     color: #0A0C10 !important;
     border-color: #E0D5C1 !important;
     background-color: transparent !important;
+}
+
+/* Override Bootstrap's default styles */
+.btn.btn-primary,
+.btn.btn-outline-primary {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    text-decoration: none !important;
 }
 
 /* Section Styles */
