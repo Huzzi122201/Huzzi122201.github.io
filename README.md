@@ -1,45 +1,71 @@
-# 🌐 Huzzi's Portfolio Website
+# Huzaifa's Portfolio
 
-## 📝 Project Description
-This is a professional portfolio website showcasing my skills, projects, and contact information. The website is designed to present my work in an engaging and user-friendly manner, while also providing visitors with easy ways to get in touch with me.
+👋 Hi, I'm Huzaifa - a Software Developer & CS Student passionate about creating elegant, responsive, and functional applications.
 
-## ✨ Features
-- **Responsive Design:** Fully responsive layout that works on all devices from mobile phones to large desktop screens
-- **Interactive UI:** Smooth scrolling, hover effects, and dynamic content presentation
-- **Animations:** AOS (Animate On Scroll) library implementation for subtle and engaging animations
-- **Skills Visualization:** Visual representation of skill proficiency levels
-- **Project Showcase:** Highlighted projects with descriptions, technologies used, and links
-- **Contact Form:** Functional contact form with validation
-- **Navigation:** Smooth-scrolling navigation with active state indicators
+## About Me
+I'm a tech enthusiast pursuing my Computer Science degree, specializing in:
+- Low-level programming
+- Algorithms
+- Full-stack development
 
-## 🛠️ Tech Stack
-- **HTML5:** Semantic markup for better accessibility and SEO
-- **CSS3:** Advanced styling including flexbox and CSS variables
-- **JavaScript:** Interactive elements and form validation
-- **Bootstrap 5:** Responsive grid system and UI components
-- **Font Awesome:** Icon library for visual elements
-- **AOS Library:** Scroll animations to enhance user experience
+My focus is on delivering performance-driven and efficient solutions while maintaining clean, maintainable code.
 
-## 🚀 Installation & Usage
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Huzzi122201/portfolio.git
-   cd portfolio
-   ```
+## 🛠 Skills
+- **Languages:** C++, Assembly, Python
+- **Web Development:** HTML/CSS, JavaScript, React
+- **Frameworks:** .NET Framework
+- **Database:** SQL
+- **Core Competencies:** Data Structures, Algorithms, Problem Solving
 
-2. Open the project:
-   You can simply open the `index.html` file in your browser to view the website locally.
+## 🚀 Projects
 
-3. Edit content:
-   - Update the information in `index.html` to personalize the portfolio
-   - Replace the images in the `assets/images` folder with your own
-   - Modify the styles in `assets/css/style.css` to match your preferences
+### C# Clothing Shop
+A comprehensive e-commerce solution featuring:
+- Product catalog
+- Shopping cart functionality
+- User authentication
+- Order management system
+- Technologies: C#, SQL, UI/UX
 
-## 🔗 Live Demo
-Visit the live portfolio: [https://huzzi122201.github.io](https://huzzi122201.github.io)
+### Snake Game in Assembly
+A classic Snake game implementation showcasing:
+- Low-level programming concepts
+- Hardware interaction
+- Assembly language mastery
+- Game development fundamentals
 
-## 📩 Author & Contact
-- **Name:** Huzzi
-- **GitHub:** [Huzzi122201](https://github.com/Huzzi122201)
-- **Email:** huzzi@example.com (replace with your actual email)
-- **LinkedIn:** [LinkedIn Profile](https://linkedin.com/in/YourProfile) (replace with your actual LinkedIn profile URL)
+### Hospital Management System
+A robust C# application for healthcare management:
+- Patient records management
+- Appointment scheduling
+- Staff management
+- Medical inventory tracking
+- Technologies: C#, .NET, SQL, Windows Forms
+
+### 25 Puzzle Game
+An engaging puzzle game developed in C++:
+- Multiple difficulty levels
+- Score tracking system
+- Intuitive user interface
+- Technologies: C++, Game Logic, Algorithm Design, Console Graphics
+
+## 🎓 Education
+- Bachelor's in Computer Science
+- FAST-NU (2022-2026)
+
+## 🌟 Interests
+- Artificial Intelligence
+- Machine Learning
+- Web Development
+- Software Engineering
+- Deep Learning
+
+## 📫 Get in Touch
+I'm always open to new opportunities and collaborations. Feel free to reach out!
+
+- 📧 Email: huzaifaasif80000@gmail.com
+- 💼 LinkedIn: [Huzaifa Asif](https://www.linkedin.com/in/huzaifa-asif-6b914a275/)
+- 🐱 GitHub: [Huzzi122201](https://github.com/Huzzi122201)
+
+---
+*This portfolio is built with modern web technologies and showcases my journey in software development.*
